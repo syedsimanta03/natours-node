@@ -830,11 +830,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.footer__nav li {
+ul.footer__nav > li:not(:first-child) {
   margin-left: 1.5rem;
 }
+
+/* .footer__nav li {
+  margin-left: 1.5rem;
+} */
 .footer__nav a {
   color: #777;
   text-decoration: none !important;
@@ -1074,7 +1079,8 @@ body {
   max-width: 120rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 7rem;
 }
 

@@ -11,11 +11,12 @@ process.on('uncaughtException', err => {
 dotenv.config({ path: './config.env' });
 const app = require('./app');
 
+
 const DB = process.env.DATABASE;
 
 mongoose
-  .connect(process.env.MONGODB_URI) || DB
-  .then(() => console.log('DB connection established'))
+  .connect(process.env.MONGODB_URI || DB)
+  .then(() => console.log('DB connection established'));
   
 
 const port = process.env.PORT || 3000;

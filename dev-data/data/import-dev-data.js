@@ -7,17 +7,13 @@ const User = require('./../../models/userModel');
 
 dotenv.config({ path: './config.env' });
 
-const DB = process.env.DATABASE.replace(
+/* const DB = process.env.DATABASE.replace(
   '<PASSWORD>',
   process.env.DATABASE_PASSWORD
-);
+); */
 
 mongoose
-  .connect(DB, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-  })
+  .connect(process.env.MLAB)
   .then(() => console.log('DB connection successful!'));
 
 // READ JSON FILE
