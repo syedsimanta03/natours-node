@@ -14,11 +14,7 @@ const app = require('./app');
 const DB = process.env.DATABASE;
 
 mongoose
-  .connect(DB, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: true,
-  })
+  .connect(process.env.MONGODB_URI) || DB
   .then(() => console.log('DB connection established'))
   
 
