@@ -14,7 +14,7 @@
 |      *email*       |             *Password*             |
 | loulou@example.com |              test1234              |
 
-> **Note:** The **Natours-Node** is kind of tour booking web apps with all features
+> **Note:** The **Natours-Node** is kind of tour booking web app with all features
 
 ## Install:saxophone:
 
